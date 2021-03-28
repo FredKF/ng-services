@@ -9,6 +9,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { LocationListComponent } from './components/location-list/location-list.component';
 import { NavMenuComponent } from './components/nav-menu/nav-menu.component';
 import { LocationItemComponent } from './components/location-item/location-item.component';
+import { CharacterDetailComponent } from './components/character-detail/character-detail.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { LocationItemComponent } from './components/location-item/location-item.
     CharacterItemComponent,
     LocationListComponent,
     NavMenuComponent,
-    LocationItemComponent
+    LocationItemComponent,
+    CharacterDetailComponent
   ],
   imports: [
     BrowserModule,

@@ -8,8 +8,6 @@ import { Character } from 'src/app/models/character.model';
 })
 export class CharacterItemComponent {
   @Input()
-  character: Character;
-  @Output()
-  characterSelected = new EventEmitter<Character>();
+  character: Character;  
   constructor() { }
 }
