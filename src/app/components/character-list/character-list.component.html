@@ -1,5 +1,5 @@
 <div class="characters">
-    <div class="character" *ngFor="let character of characters">
+    <div class="character" *ngFor="let character of (characters$ | async)?.results">
         <h3>{{character.name}}</h3>
         <img [src]="character.image" [alt]="character.name">
         <h5>Status: {{character.status}}</h5>

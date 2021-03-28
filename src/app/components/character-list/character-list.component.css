@@ -1,0 +1,16 @@
+.characters{
+    display: grid;
+    grid-template: repeat(5,1fr)/repeat(4,1fr);
+}
+
+.character{
+    margin:  0.5em;
+    padding:  0.5em;
+    border-radius: 0.5em;
+    cursor: pointer;
+    background-color: rgb(179,224,255);    
+}
+
+.img{
+    width: 100%;
+}
