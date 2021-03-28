@@ -1,1 +1,8 @@
-<p>character-list works!</p>
+<div class="characters">
+    <div class="character" *ngFor="let character of characters">
+        <h3>{{character.name}}</h3>
+        <img [src]="character.image" [alt]="character.name">
+        <h5>Status: {{character.status}}</h5>
+        <h5>Gender: {{character.gender}}</h5>
+    </div>
+</div>
