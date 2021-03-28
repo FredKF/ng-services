@@ -13,12 +13,6 @@ export interface Character {
     created: Date;
 }
 
-interface Info {
-    count: number;
-    pages: number;
-    next: string;
-    prev?: any;
-}
 
 interface Origin {
     name: string;

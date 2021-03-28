@@ -1,11 +1,5 @@
 import {Character} from "./character.model";
-
-interface Info {
-    count: number;
-    pages: number;
-    next: string;
-    prev?: any;
-}
+import { Info } from "./info.interface";
 
 export interface CharacterResponse {
     info: Info;

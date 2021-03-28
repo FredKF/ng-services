@@ -1,1 +1,6 @@
-<p>location-list works!</p>
+<div class="locations">
+    <app-location-item 
+        *ngFor="let location of (locations$ | async)?.results"
+        [location]="location">
+    </app-location-item>    
+</div>
