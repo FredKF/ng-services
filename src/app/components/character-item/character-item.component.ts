@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { Character } from 'src/app/models/character.model';
 
 @Component({
@@ -7,8 +7,9 @@ import { Character } from 'src/app/models/character.model';
   styleUrls: ['./character-item.component.css']
 })
 export class CharacterItemComponent {
-
   @Input()
   character: Character;
+  @Output()
+  characterSelected = new EventEmitter<Character>();
   constructor() { }
 }

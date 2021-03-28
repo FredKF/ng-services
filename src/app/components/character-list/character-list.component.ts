@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Observable } from 'rxjs';
+import { Observable } from 'rxjs/internal/Observable';
+
 import { CharacterResponse } from 'src/app/models/character-response.interface';
 import { Character } from 'src/app/models/character.model';
 import { CharacterService } from 'src/app/services/character.service';
@@ -14,8 +15,15 @@ export class CharacterListComponent implements OnInit {
   // characters: Character[] = [];
   //el signo de $ solo se pone para identificarlo como observable
   characters$: Observable<CharacterResponse>;
-  constructor(private characterService: CharacterService ) { }
+  constructor(private characterService: CharacterService) { }
 
+  ngOnInit(): void {
+    this.characters$ = this.characterService.getCharacters();
+  }
+
+  setCharacter(character: Character): void{
+    console.log(character);
+  }
   // ngOnInit(): void {
   //   console.log('inicializado ok');
   //   this.characterService.getCharacters().subscribe(
@@ -26,8 +34,4 @@ export class CharacterListComponent implements OnInit {
   //     console.error(error)
   //   });
   // }
-  
-  ngOnInit(): void {
-    this.characters$ = this.characterService.getCharacters();
-  }
 }
