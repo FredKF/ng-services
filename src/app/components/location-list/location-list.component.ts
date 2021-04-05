@@ -16,5 +16,4 @@ export class LocationListComponent implements OnInit {
   ngOnInit(): void {
     this.locations$ = this.locationService.getLocations();
   }
-
 }
