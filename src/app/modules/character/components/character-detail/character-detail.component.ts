@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Observable } from 'rxjs';
 import { Character } from 'src/app/models/character.model';
-import { CharacterService } from 'src/app/services/character.service';
+import { CharacterService } from 'src/app/modules/character/character.service';
 
 @Component({
   selector: 'app-character-detail',

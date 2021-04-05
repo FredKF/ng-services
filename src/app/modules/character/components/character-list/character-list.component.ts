@@ -3,7 +3,7 @@ import { Observable } from 'rxjs/internal/Observable';
 
 import { CharacterResponse } from 'src/app/models/character-response.interface';
 import { Character } from 'src/app/models/character.model';
-import { CharacterService } from 'src/app/services/character.service';
+import { CharacterService } from 'src/app/modules/character/character.service';
 
 @Component({
   selector: 'app-character-list',

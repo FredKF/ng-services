@@ -1,14 +1,11 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { CharacterDetailComponent } from './components/character-detail/character-detail.component';
-import { CharacterListComponent } from './components/character-list/character-list.component';
 import { LocationListComponent } from './components/location-list/location-list.component';
 
 const routes: Routes = [
-  {path:'characters', component: CharacterListComponent},
+  {path: 'characters', loadChildren:()=>import('./modules/character/character.module').then(m => m.CharacterModule)},//cuando haya una peticion a characters se carga el modulo (lazyloading)
   {path:'locations', component: LocationListComponent},
   {path:'', redirectTo:'characters', pathMatch:'full'},
-  {path:'character/:id', component: CharacterDetailComponent},
 ];
 
 @NgModule({
