@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { AfterContentInit, AfterViewInit, Component, DoCheck, OnDestroy, OnInit } from '@angular/core';
 import { Observable } from 'rxjs/internal/Observable';
 
 import { CharacterResponse } from 'src/app/models/character-response.interface';
@@ -9,7 +9,7 @@ import { CharacterService } from '../../character.service';
   templateUrl: './character-list.component.html',
   styleUrls: ['./character-list.component.css']
 })
-export class CharacterListComponent implements OnInit {
+export class CharacterListComponent implements OnInit, OnDestroy, DoCheck, AfterContentInit, AfterViewInit {
   //se puede hacer de las dos formas
   // characters: Character[] = [];
   //el signo de $ solo se pone para identificarlo como observable
@@ -18,6 +18,22 @@ export class CharacterListComponent implements OnInit {
 
   ngOnInit(): void {
     this.characters$ = this.characterService.getCharacters();
+  }
+  ngAfterContentInit(): void{
+    console.log('AfterInit');
+  }
+
+  ngAfterViewInit(): void{
+    console.log('AfterViewInit');
+  }
+
+  //para cuando hay cambios
+  ngDoCheck(): void{
+    console.log('DoCheck');
+  }
+
+  ngOnDestroy(): void{
+    console.log('onDestroy');
   }
 
   // ngOnInit(): void {
