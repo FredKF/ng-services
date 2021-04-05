@@ -7,18 +7,20 @@ import { AppRoutingModule } from './app-routing.module';
 import { LocationListComponent } from './components/location-list/location-list.component';
 import { NavMenuComponent } from './components/nav-menu/nav-menu.component';
 import { LocationItemComponent } from './components/location-item/location-item.component';
+import { CharacterModule } from './modules/character/character.module';
 
 @NgModule({
   declarations: [
     AppComponent,  
     LocationListComponent,
-    NavMenuComponent,
-    LocationItemComponent
+    LocationItemComponent,
+    NavMenuComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
-    AppRoutingModule
+    AppRoutingModule,
+    CharacterModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -5,7 +5,7 @@ import { CharacterListComponent } from './components/character-list/character-li
 
 const routes: Routes = [
   {path:'', component: CharacterListComponent},
-  {path:':id', component: CharacterDetailComponent}
+  {path: ':id', component: CharacterDetailComponent}
 ];
 
 @NgModule({
