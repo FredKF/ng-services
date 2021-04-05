@@ -8,6 +8,7 @@ import { LocationListComponent } from './components/location-list/location-list.
 import { NavMenuComponent } from './components/nav-menu/nav-menu.component';
 import { LocationItemComponent } from './components/location-item/location-item.component';
 import { CharacterModule } from './modules/character/character.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { CharacterModule } from './modules/character/character.module';
     BrowserModule,
     HttpClientModule,
     AppRoutingModule,
-    CharacterModule
+    CharacterModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
